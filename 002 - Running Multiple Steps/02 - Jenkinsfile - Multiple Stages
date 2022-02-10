@@ -15,17 +15,11 @@ pipeline {
 		}
 		stage('test'){
 		steps {
-			data()
+			grep '2019' text.txt
 			}
 		}
 			
     }
-}
-
-def data(){
-	if (text.txt == '2019'){
-		print('HUUUUU')
-		}
 }
 
 def repeat(){
