@@ -8,9 +8,14 @@ pipeline {
         stage('build') {
 		    steps {
 			
-			sh 'date'
+			sh repeat
 			sh 'sleep 10s'
+			sh repeat
 		    }
         }
     }
+}
+
+def repeat(){
+	sh 'date >> text.txt'
 }
