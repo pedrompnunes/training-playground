@@ -15,7 +15,7 @@ pipeline {
 		}
 		stage('test'){
 		steps {
-			grep '2019' text.txt
+			sh 'grep 2019 text.txt'
 			}
 		}
 			
