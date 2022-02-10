@@ -5,5 +5,27 @@ pipeline {
 		}
 	}
     stages {
+	    stage('build') {
+			    steps {
+
+				repeat()
+				sh 'sleep 10s'
+				repeat()
+			    }
+		}
+		stage('test'){
+			data()
+		}
+			
     }
+}
+
+def data(){
+	if text.txt == '2019'{
+		print('HUUUUU')
+		}
+}
+
+def repeat(){
+	sh 'date >> text.txt'
 }
