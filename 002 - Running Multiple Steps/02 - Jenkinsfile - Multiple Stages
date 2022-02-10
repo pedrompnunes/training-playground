@@ -15,7 +15,7 @@ pipeline {
 		}
 		stage('test'){
 		steps {
-			sh 'grep 2021 text.txt'
+			sh 'grep 2022 text.txt'
 			}
 		}
 			
