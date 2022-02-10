@@ -21,7 +21,7 @@ pipeline {
 }
 
 def data(){
-	if text.txt == '2019'{
+	if (text.txt == '2019'){
 		print('HUUUUU')
 		}
 }
