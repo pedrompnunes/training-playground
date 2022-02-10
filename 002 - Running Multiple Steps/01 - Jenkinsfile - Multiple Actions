@@ -5,5 +5,9 @@ pipeline {
 		}
 	}
     stages {
+	    steps {
+			sh 'sleep 10s'
+			sh 'date'
+		    }
     }
 }
