@@ -8,12 +8,12 @@ pipeline {
         stage('build') {
             steps {
 	    script {
-          	env.NAME = input message: 'Please enter the username',
+          	env.NAME = input message: 'Please enter the name',
                              	parameters: [string(defaultValue: '',
                                           	description: '',
                                           	name: 'Name')]
-          	env.AGE = input message: 'Please enter the password',
-                             	parameters: [password(defaultValue: '',
+          	env.AGE = input message: 'Please enter your age',
+                             	parameters: [string(defaultValue: '',
                                           	description: '',
                                           	name: 'Age')]
         }
