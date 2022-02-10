@@ -1,14 +1,14 @@
 pipeline {
     agent { 
 		docker { 
-			image 'alpine:999999999' 
+			image 'alpine:latest' 
 		}
 	}
     stages {
         stage('build') {
             steps {
                 sh 'cat /etc/alpine-release'
-                sh 'sleep 5d'
+                sh 'sleep 5s'
             }
         }
     }
