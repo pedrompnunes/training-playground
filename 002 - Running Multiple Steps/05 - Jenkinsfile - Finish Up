@@ -10,16 +10,16 @@ pipeline {
                 sh "exit \$((RANDOM % 2))"
             }
         }
-	post { 
-        success { 
-            echo 'Success'
-        }
+     post { 
+	success { 
+	    echo 'Success'
+	}
 	failure { 
-            echo 'Fail'
-        }
+	    echo 'Fail'
+	}
 	alaways { 
-            echo 'Always'
-        }
+	    echo 'Always'
+	}
     }
     }
 }
