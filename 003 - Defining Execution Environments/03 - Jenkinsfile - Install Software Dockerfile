@@ -1,5 +1,9 @@
 pipeline {
-    agent { 
+    agent {
+    dockerfile {
+        filename '03 - Jenkinsfile - Install Software Dockerfile'
+        dir '003 - Defining Execution Environments'
+    }
 	}
     stages {
         stage('build') {
