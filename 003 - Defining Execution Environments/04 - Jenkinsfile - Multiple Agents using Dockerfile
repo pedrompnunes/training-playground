@@ -1,6 +1,26 @@
 pipeline {
-    agent { 
-	}
+    agent none 
     stages {
+        stage('Example Build') {
+            agent {
+	    dockerfile {
+		filename '03 - Dockerfile - Maven'
+        	dir '003 - Defining Execution Environments'
+		label 'MAVEN'
+		
+    }
+    }       
+        }
+        stage('Example Test') {
+            agent {
+	    dockerfile {
+		filename '03 - Dockerfile - NPM'
+        	dir '003 - Defining Execution Environments'
+		label 'NPM'
+		
+    }
+    }
+            }
+        }
     }
 }
