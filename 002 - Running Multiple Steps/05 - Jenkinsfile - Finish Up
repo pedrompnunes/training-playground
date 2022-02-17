@@ -20,6 +20,6 @@ pipeline {
 	alaways { 
 	    echo 'Always'
 	}
-     }
+      }
     }
 }
