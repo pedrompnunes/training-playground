@@ -9,10 +9,10 @@ pipeline {
             }
         }
         stage('Example Test') {
-            agent { docker 'openjdk:8-jre' } 
+            agent { docker 'node:current-alpine3.14' } 
             steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
+                echo 'Hello, NPM'
+                sh 'npm, --version'
             }
         }
     }
