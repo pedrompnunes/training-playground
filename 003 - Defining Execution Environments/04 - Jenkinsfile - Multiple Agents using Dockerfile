@@ -12,6 +12,7 @@ pipeline {
     }
 	 steps {
             	echo "Maven"
+		sh 'mvn --version'
               
             }	
         }
@@ -26,6 +27,7 @@ pipeline {
     }
 	     steps {
             	echo "NPM"
+		sh 'npm --version'
                 
             }
             }
