@@ -3,7 +3,7 @@ pipeline {
     dockerfile {
         filename '02 - Dockerfile - Dockerfile Agent'
         dir '003 - Defining Execution Environments'
-	additionalBuildArgs  '"Value for execution"'
+	args  'Value for execution'
        
     }
 	}
