@@ -5,5 +5,20 @@ pipeline {
 		}
 	}
     stages {
+    parallel {
+                stage('Maven') {
+                    agent { docker 'maven:3.8.1-adoptopenjdk-11' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+                }
+                stage('NPM') {
+                    agent { docker 'node:current-alpine3.14' } 
+            steps {
+                echo 'Hello, NPM'
+                sh 'npm --version'
+            }
+                }
     }
 }
