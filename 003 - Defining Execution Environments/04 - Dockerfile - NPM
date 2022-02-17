@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN apk npm -version
+RUN npm -version
