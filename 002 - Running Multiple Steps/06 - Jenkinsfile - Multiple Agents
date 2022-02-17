@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Example Test') {
-            agent { docker 'node:latest' } 
+            agent { docker 'node:current-alpine3.14' } 
             steps {
                 echo 'Hello, NPM'
                 sh 'npm --version'
