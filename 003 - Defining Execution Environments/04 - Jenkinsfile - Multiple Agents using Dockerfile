@@ -28,7 +28,6 @@ pipeline {
 	     steps {
             	echo "NPM"
 		sh 'npm --version'
-                
             }
             }
         }
