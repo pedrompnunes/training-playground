@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN apk mvn --version
+RUN mvn --version
