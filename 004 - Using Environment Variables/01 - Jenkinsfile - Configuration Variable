@@ -2,11 +2,13 @@ pipeline {
     agent { 
 		docker { 
 			image 'alpine:latest'
-			args '"NOTIFICATION_EMAIL=email@email.com"'
 		}
 	}
     stages {
         stage('build') {
+	environment {
+                NOTIFICATION_EMAIL = 'email@email.com'
+            }
             steps {
                 echo "$NOTIFICATION_EMAIL"
             }
