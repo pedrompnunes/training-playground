@@ -1,7 +1,7 @@
 pipeline {
     agent none 
     stages {
-        stage('Example Build') {
+        stage('MAVEN') {
             agent {
 	    dockerfile {
 		filename '03 - Dockerfile - Maven'
@@ -9,9 +9,13 @@ pipeline {
 		label 'MAVEN'
 		
     }
-    }       
+    }
+	 steps {
+            	echo "Maven"
+              
+            }	
         }
-        stage('Example Test') {
+        stage('NPM') {
             agent {
 	    dockerfile {
 		filename '03 - Dockerfile - NPM'
@@ -20,6 +24,10 @@ pipeline {
 		
     }
     }
+	     steps {
+            	echo "NPM"
+                
+            }
             }
         }
     }
