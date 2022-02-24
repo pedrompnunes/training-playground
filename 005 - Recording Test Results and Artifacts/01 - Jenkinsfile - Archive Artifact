@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "curl "www.google.com" > generatedFile.txt
+                sh "curl "www.google.com > generatedFile.txt"
             }
         }
     }
